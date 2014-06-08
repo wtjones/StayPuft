@@ -622,7 +622,7 @@ margin on the iframe, cause it breaks stuff. */
 main
 {
     position: absolute;
-    left: 370px;
+    left: 170px;
     right: 0px;
     top: 0px;
     bottom: 0px;

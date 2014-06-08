@@ -20,8 +20,9 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
     {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+
+
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -40,11 +41,11 @@
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
             <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
             <h3 class="blog-description">{{@blog.description}}</h2>
-
+	<!--
             <form id="search">
                 <input id="search-field" placeholder="Search"/>
             </form>
-
+	-->
             <div id="sidebar-links">
                 <!--<ul id="subscription-links">
                     <li><a target="_blank" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> Subscribe via RSS</a></li>
@@ -54,8 +55,9 @@
                 </ul>
 		-->
                 <ul id="sidebar-internal">
-                    <!-- For 'About' and other pages -->
-			<li><a href="/shimext">ShimExt</a></li>
+			<li>Projects</li>
+                    <!-- For 'About' and other pages -->			
+			<li>&#149;&nbsp;<a href="/shimext">ShimExt</a></li>			
                 </ul>
 		<hr style="margin: 0">
                 <ul id="sidebar-external">
@@ -78,6 +80,9 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script src="{{asset "js/instantclick.min.js"}}" data-no-instant></script>
     <script data-no-instant>
         InstantClick.on('change', function() {
